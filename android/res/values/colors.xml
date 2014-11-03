@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_end">#8A6242</color>
+    <color name="level_1">#475556</color>
+    <color name="level_2">#568A7E</color>
+    <color name="level_3">#ACC29C</color>
+</resources>
