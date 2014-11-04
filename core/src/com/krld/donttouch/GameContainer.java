@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.krld.donttouch.game.GameDontTouch;
 import com.krld.donttouch.game.GameRenderer;
 
-public class GameContainer extends ApplicationAdapter {
+public class GameContainer extends ApplicationAdapter implements ActiveView{
     private final HostType mType;
     private final GameDontTouch mGame;
     private final GameRenderer mRenderer;
@@ -29,12 +29,23 @@ public class GameContainer extends ApplicationAdapter {
         mRenderer.setShapeRenderer(mShapeRenderer);
 
         mGame.init();
+        mRenderer.init();
 	}
 
 	@Override
 	public void render () {
-		mBatch.begin();
+        mShapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         mRenderer.draw();
-		mBatch.end();
+        mShapeRenderer.end();
 	}
+
+    @Override
+    public void onPause() {
+        mGame.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        mGame.onResume();
+    }
 }

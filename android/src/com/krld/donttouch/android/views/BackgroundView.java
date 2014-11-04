@@ -8,10 +8,10 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import com.krld.donttouch.ActiveView;
 import com.krld.donttouch.android.R;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class BackgroundView extends View implements View.OnTouchListener, ActiveView {

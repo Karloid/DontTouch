@@ -1,4 +1,4 @@
-package com.krld.donttouch.android.views;
+package com.krld.donttouch;
 
 public interface ActiveView {
 	void onPause();
