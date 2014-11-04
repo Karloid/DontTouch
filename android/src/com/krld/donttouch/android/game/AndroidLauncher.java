@@ -1,16 +1,18 @@
-package com.krld.donttouch.android;
+package com.krld.donttouch.android.game;
 
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.krld.donttouch.TouchGame;
+import com.krld.donttouch.GameContainer;
+import com.krld.donttouch.HostType;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-		initialize(new TouchGame(), config);
+        GameContainer game = new GameContainer(HostType.ANDROID);
+        initialize(game, config);
 	}
 }
